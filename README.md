@@ -1,9 +1,8 @@
 # ASP.NET Tutorial
+https://docs.microsoft.com/ko-kr/aspnet/core/tutorials/razor-pages/?view=aspnetcore-5.0
 
-## OS : macOS
-## TOOL : Visual Studio or Jenbrain Rider
-## https://docs.microsoft.com/ko-kr/aspnet/core/tutorials/razor-pages/?view=aspnetcore-5.0
-
+### OS : macOS
+### TOOL : Visual Studio or Jenbrain Rider
 
 ### Download .NET SDK
 https://dotnet.microsoft.com/download#macos
@@ -13,5 +12,8 @@ https://dotnet.microsoft.com/download#macos
 dotnet tool install --global dotnet-ef
 ```
 
-#### dotnet build 
-#### dotnet run 
+### App Run
+```
+dot build 
+dotnet run 
+```
