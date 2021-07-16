@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -26,8 +27,9 @@ namespace RazorPagesMovie.Pages.Customers
             Customers = await _context.Customers.ToListAsync();
         }
 
-        public async Task<IActionResult> onPostDeleteAsync(int id)
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
         {
+            Console.WriteLine("id : "+ id);
             var contact = await _context.Customers.FindAsync(id);
 
             if (contact != null)

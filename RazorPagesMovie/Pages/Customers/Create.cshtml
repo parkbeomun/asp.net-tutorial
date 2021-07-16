@@ -1,6 +1,5 @@
 ﻿@page
-@model RazorPagesMovie.Pages.Customers.CreateModel
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model CreateModel
 
 @{
     ViewData["Title"] = "Customer Create";
@@ -9,6 +8,8 @@
 <p>Enter a customer name:</p>
 
 <form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <span asp-validation-for="Customer.Name"></span>
     Name:
     <input asp-for="Customer.Name">
     <input type="submit">

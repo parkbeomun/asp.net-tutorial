@@ -33,6 +33,7 @@ namespace RazorPagesMovie.Pages.Customers
             _context.Customers.Add(Customer);
             await _context.SaveChangesAsync();
 
+            //상대경로
             return RedirectToPage("./Index");
         }
 
