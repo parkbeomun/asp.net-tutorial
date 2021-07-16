@@ -1,0 +1,15 @@
+﻿@page
+@model RazorPagesMovie.Pages.Customers.CreateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Customer Create";
+}
+
+<p>Enter a customer name:</p>
+
+<form method="post">
+    Name:
+    <input asp-for="Customer.Name">
+    <input type="submit">
+</form>

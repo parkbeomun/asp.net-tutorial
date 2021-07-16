@@ -29,8 +29,15 @@ namespace RazorPagesMovie
         {
             if (Environment.IsDevelopment())
             {
+                
                 services.AddDbContext<RazorPagesMovieContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("RazorPagesMovieContext")));
+                
+                
+                /*
+                services.AddDbContext<CustomerDbContext>(options => 
+                    options.UseInMemoryDataBase("name"));
+                    */
             }
             else
             {
@@ -38,7 +45,7 @@ namespace RazorPagesMovie
                     options.UseSqlServer(
                         Configuration.GetConnectionString("MovieContext")));
             }
-            services.AddRazorPages();
+            services.AddRazorPages(); //Razor Page 사용설정
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,7 +71,7 @@ namespace RazorPagesMovie
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapRazorPages(); //Razor Page 사용설정
             });
         }
     }
